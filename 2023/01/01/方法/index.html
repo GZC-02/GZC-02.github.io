@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>方法 | GZC的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.方法1.1 概念​    方法（method）是程序中最小的执行单元  注意：  方法必须先创建才可以使用，该过程成为方法定义  方法创建后并不是直接可以运行的，需要手动使用后，才执行，该过程成为方法调用     1.2. 实际开发中，什么时候用到方法？重复的代码、具有独立功能的代码可以抽取到方法中。 1.3. 实际开发中，方法有什么好处？●可以提高代码的复用性●可以提高代码的可维护性 1.4">
+<meta property="og:type" content="article">
+<meta property="og:title" content="方法">
+<meta property="og:url" content="http://example.com/2023/01/01/%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="GZC的博客">
+<meta property="og:description" content="1.方法1.1 概念​    方法（method）是程序中最小的执行单元  注意：  方法必须先创建才可以使用，该过程成为方法定义  方法创建后并不是直接可以运行的，需要手动使用后，才执行，该过程成为方法调用     1.2. 实际开发中，什么时候用到方法？重复的代码、具有独立功能的代码可以抽取到方法中。 1.3. 实际开发中，方法有什么好处？●可以提高代码的复用性●可以提高代码的可维护性 1.4">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/%E6%96%B9%E6%B3%95/image-20230101225751608.png">
+<meta property="article:published_time" content="2023-01-01T12:14:57.000Z">
+<meta property="article:modified_time" content="2023-01-01T15:02:35.973Z">
+<meta property="article:author" content="GZC">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/%E6%96%B9%E6%B3%95/image-20230101225751608.png">
+  
+    <link rel="alternate" href="/atom.xml" title="GZC的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">GZC的博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/01/01/%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2023-01-01T12:14:57.000Z" itemprop="datePublished">2023-01-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java%E5%85%A5%E9%97%A8/">java入门</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      方法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-方法"><a href="#1-方法" class="headerlink" title="1.方法"></a>1.方法</h2><h3 id="1-1-概念"><a href="#1-1-概念" class="headerlink" title="1.1 概念"></a>1.1 概念</h3><p>​    <strong>方法（method）</strong>是程序中<strong>最小的执行单元</strong></p>
+<ul>
+<li><p>注意：</p>
+<ul>
+<li><p>方法必须先创建才可以使用，该过程成为方法定义</p>
+</li>
+<li><p>方法创建后并不是直接可以运行的，需要手动使用后，才执行，该过程成为方法调用</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-实际开发中，什么时候用到方法？"><a href="#1-2-实际开发中，什么时候用到方法？" class="headerlink" title="1.2. 实际开发中，什么时候用到方法？"></a>1.2. 实际开发中，什么时候用到方法？</h3><p>重复的代码、具有独立功能的代码可以抽取到方法中。</p>
+<h3 id="1-3-实际开发中，方法有什么好处？"><a href="#1-3-实际开发中，方法有什么好处？" class="headerlink" title="1.3. 实际开发中，方法有什么好处？"></a>1.3. 实际开发中，方法有什么好处？</h3><p>●可以提高代码的复用性<br>●可以提高代码的可维护性</p>
+<h3 id="1-4-方法的定义"><a href="#1-4-方法的定义" class="headerlink" title="1.4 方法的定义"></a>1.4 方法的定义</h3><p>通俗来说，就是把一些代码打包起来，</p>
+<p>带返回值方法的定义：</p>
+<h3 id="1-5-方法的调用"><a href="#1-5-方法的调用" class="headerlink" title="1.5 方法的调用"></a>1.5 方法的调用</h3><p>方法定义后并不是直接运行的，而是手动调用才能知执行</p>
+<h3 id="1-6-最简单的方法定义和调用："><a href="#1-6-最简单的方法定义和调用：" class="headerlink" title="1.6 最简单的方法定义和调用："></a>1.6 <strong>最简单的方法定义</strong>和调用：</h3><p><strong>定义</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> 方法名 () &#123;</span><br><span class="line">	方法体（就是打包起来的代码）;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>调用</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">方法名();</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-7-带参数的方法定义和调用"><a href="#1-7-带参数的方法定义和调用" class="headerlink" title="1.7 带参数的方法定义和调用"></a>1.7 带参数的方法定义和调用</h3><p>参数：由数据类型和变量名组成 -  数据类型 变量名</p>
+<p>示例：int a</p>
+<p><strong>定义</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> 方法名 (参数<span class="number">1</span>) &#123;</span><br><span class="line">	方法体;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> 方法名 (参数<span class="number">1</span>, 参数<span class="number">2</span>, 参数<span class="number">3.</span>..) &#123;</span><br><span class="line">	方法体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>方法定义时，参数中的数据类型与变量名都不能缺少，缺少任意一个程序将报错</p>
+<p>方法定义时，多个参数之间使用逗号( ，)分隔</p>
+<p><strong>调用</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">方法名(参数)；</span><br><span class="line"></span><br><span class="line">方法名(参数1,参数2);</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-8-形参和实参"><a href="#1-8-形参和实参" class="headerlink" title="1.8 形参和实参"></a>1.8 形参和实参</h3><ol>
+<li>形参：方法定义中的参数</li>
+</ol>
+<p>​          等同于变量定义格式，例如：int number</p>
+<ol start="2">
+<li>实参：方法调用中的参数</li>
+</ol>
+<p>​          等同于使用变量或常量，例如： 10  number</p>
+<h3 id="1-9-带返回值方法的定义和调用"><a href="#1-9-带返回值方法的定义和调用" class="headerlink" title="1.9 带返回值方法的定义和调用"></a>1.9 带返回值方法的定义和调用</h3><p><strong>定义</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> 数据类型 方法名 ( 参数 ) &#123; </span><br><span class="line">	<span class="keyword">return</span> 数据 ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>调用</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">方法名 ( 参数 ) ;</span><br><span class="line">数据类型 变量名 = 方法名 ( 参数 ) ;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="1-10-注意事项"><a href="#1-10-注意事项" class="headerlink" title="1.10 注意事项"></a>1.10 注意事项</h3><ul>
+<li><p>方法不能嵌套定义</p>
+<ul>
+<li><p>示例代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MethodDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">methodOne</span><span class="params">()</span> &#123;</span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">methodTwo</span><span class="params">()</span> &#123;</span><br><span class="line">       		<span class="comment">// 这里会引发编译错误!!!</span></span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>void表示无返回值，可以省略return，也可以单独的书写return，后面不加数据</p>
+<ul>
+<li><p>示例代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MethodDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">methodTwo</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">//return 100; 编译错误，因为没有具体返回值类型</span></span><br><span class="line">        <span class="keyword">return</span>;	</span><br><span class="line">        <span class="comment">//System.out.println(100); return语句后面不能跟数据或代码</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="1-11-方法的通用格式"><a href="#1-11-方法的通用格式" class="headerlink" title="1.11 方法的通用格式"></a>1.11 方法的通用格式</h3><ul>
+<li><p>格式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> 返回值类型 方法名(参数) &#123;</span><br><span class="line">   方法体; </span><br><span class="line">   <span class="keyword">return</span> 数据 ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>解释：</p>
+<ul>
+<li><p>public static     修饰符，目前先记住这个格式</p>
+<p>返回值类型    方法操作完毕之后返回的数据的数据类型</p>
+<p>​            如果方法操作完毕，没有数据返回，这里写void，而且方法体中一般不写return</p>
+<p> 方法名        调用方法时候使用的标识</p>
+<p> 参数        由数据类型和变量名组成，多个参数之间用逗号隔开</p>
+<p> 方法体        完成功能的代码块</p>
+<p> return        如果方法操作完毕，有数据返回，用于把数据返回给调用者</p>
+</li>
+</ul>
+</li>
+<li><p>定义方法时，要做到两个明确</p>
+<ul>
+<li>明确返回值类型：主要是明确方法操作完毕之后是否有数据返回，如果没有，写void；如果有，写对应的数据类型</li>
+<li>明确参数：主要是明确参数的类型和数量</li>
+</ul>
+</li>
+<li><p>调用方法时的注意：</p>
+<ul>
+<li>void类型的方法，直接调用即可</li>
+<li>非void类型的方法，推荐用变量接收调用</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-方法的重载"><a href="#2-方法的重载" class="headerlink" title="2 方法的重载"></a>2 方法的重载</h2><h3 id="2-1-概念"><a href="#2-1-概念" class="headerlink" title="2.1 概念"></a>2.1 概念</h3><ul>
+<li><p>方法重载指同一个类中定义的多个方法之间的关系，满足下列条件的多个方法相互构成重载</p>
+<ul>
+<li>多个方法在同一个类中</li>
+<li>多个方法具有相同的方法名</li>
+<li>多个方法的<strong>参数不相同</strong>，<strong>类型不同</strong>或者<strong>数量不同</strong></li>
+</ul>
+<p><strong>简单记</strong>：<strong>同一个类中，==方法名相同==，==参数不同==的方法。==与返回值==无关。</strong></p>
+<p>参数不同：<strong>个数</strong>，<strong>类型</strong>，<strong>顺序</strong>不同。</p>
+<p>java虚拟机会通过参数的不同来区分同名的方法</p>
+</li>
+<li><p>注意：</p>
+<ul>
+<li>重载仅对应方法的定义，与方法的调用无关，调用方式参照标准格式</li>
+<li>重载仅针对同一个类中方法的名称与参数进行识别，与返回值无关，换句话说不能通过返回值来判定两个方法是否相互构成重载</li>
+</ul>
+</li>
+<li><p>正确范例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MethodDemo</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">fn</span><span class="params">(<span class="type">int</span> a)</span> &#123;</span><br><span class="line">    	<span class="comment">//方法体</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">fn</span><span class="params">(<span class="type">double</span> a)</span> &#123;</span><br><span class="line">    	<span class="comment">//方法体</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MethodDemo</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="type">float</span> <span class="title function_">fn</span><span class="params">(<span class="type">int</span> a)</span> &#123;</span><br><span class="line">    	<span class="comment">//方法体</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">fn</span><span class="params">(<span class="type">int</span> a , <span class="type">int</span> b)</span> &#123;</span><br><span class="line">    	<span class="comment">//方法体</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>错误范例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MethodDemo</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">fn</span><span class="params">(<span class="type">int</span> a)</span> &#123;</span><br><span class="line">    	<span class="comment">//方法体</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">fn</span><span class="params">(<span class="type">int</span> a)</span> &#123; 	<span class="comment">/*错误原因：重载与返回值无关*/</span></span><br><span class="line">    	<span class="comment">//方法体</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MethodDemo01</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">fn</span><span class="params">(<span class="type">int</span> a)</span> &#123;</span><br><span class="line">        <span class="comment">//方法体</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MethodDemo02</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">fn</span><span class="params">(<span class="type">double</span> a)</span> &#123; <span class="comment">/*错误原因：这是两个类的两个fn方法*/</span></span><br><span class="line">        <span class="comment">//方法体</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>顺序不同</strong></p>
+<p><img src="/%E6%96%B9%E6%B3%95/image-20230101225751608.png" alt="顺序不同构成重载"></p>
+<h3 id="2-2-方法重载练习"><a href="#2-2-方法重载练习" class="headerlink" title="2.2 方法重载练习"></a>2.2 方法重载练习</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/01/01/%E6%96%B9%E6%B3%95/" data-id="clcdi5v4m0000ecvn1lj96dqc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/12/30/java%E6%95%B0%E7%BB%84/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">java数组</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo%E5%8D%9A%E5%AE%A2/">hexo博客</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javaWeb/">javaWeb</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/java%E5%85%A5%E9%97%A8/">java入门</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8A%A8%E6%BC%AB/">动漫</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/01/01/%E6%96%B9%E6%B3%95/">方法</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/30/java%E6%95%B0%E7%BB%84/">java数组</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/30/java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">java流程控制</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/28/java%E8%BF%90%E7%AE%97%E7%AC%A6/">java运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/28/Junit-%E6%B5%8B%E8%AF%95%E6%A6%82%E8%BF%B0/">Junit_测试概述</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 GZC<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
