@@ -300,13 +300,29 @@
 <li><p>ArrayList集合的特点</p>
 <p>​    长度可以变化，只能存储引用数据类型。</p>
 </li>
-<li><p>泛型的使用</p>
-<p>​    用于约束集合中存储元素的数据类型</p>
+<li><p>泛型的使用（在ArrayList中是   这个    &lt;数据类型&gt;  ）</p>
+<p>​    <strong>用于约束集合中存储元素的数据类型</strong></p>
 </li>
 </ul>
 <h3 id="集合和数组的优势对比："><a href="#集合和数组的优势对比：" class="headerlink" title="集合和数组的优势对比："></a>集合和数组的优势对比：</h3><ol>
-<li>长度可变</li>
-<li>添加数据的时候不需要考虑索引，默认将数据添加到末尾</li>
+<li><p>长度可变，删除元素集合自动减。</p>
+</li>
+<li><p>添加数据的时候不需要考虑索引，默认将数据添加到末尾</p>
+</li>
+<li><p>存储类型</p>
+<table>
+<thead>
+<tr>
+<th>数组</th>
+<th>可以存基本数据类型和引用数据类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>集合</td>
+<td>可以存引用数据类型，基本数据类型需要变换成包装类</td>
+</tr>
+</tbody></table>
+</li>
 </ol>
 <h3 id="1-2-ArrayList类常用方法"><a href="#1-2-ArrayList类常用方法" class="headerlink" title="1.2 ArrayList类常用方法"></a>1.2 ArrayList类常用方法</h3><h4 id="1-2-1-构造方法"><a href="#1-2-1-构造方法" class="headerlink" title="1.2.1 构造方法"></a>1.2.1 构造方法</h4><table>
 <thead>
@@ -320,6 +336,10 @@
 <td>创建一个空的集合对象</td>
 </tr>
 </tbody></table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//JDK7之前</span></span><br><span class="line">ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;String&gt; ();</span><br><span class="line"></span><br><span class="line"><span class="comment">//JDK7及之后 等号之后的数据类型可以不写，但必须留着。</span></span><br><span class="line">ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span> &lt;&gt;();</span><br></pre></td></tr></table></figure>
+
+
+
 <h4 id="1-2-2-成员方法"><a href="#1-2-2-成员方法" class="headerlink" title="1.2.2 成员方法"></a>1.2.2 成员方法</h4><table>
 <thead>
 <tr>
@@ -328,23 +348,23 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>public boolean add(要添加的元素)</td>
+<td>public boolean add(要添加的元素)增</td>
 <td>将指定的元素追加到此集合的末尾</td>
 </tr>
 <tr>
-<td>public boolean remove(要删除的元素)</td>
+<td>public boolean remove(要删除的元素)删</td>
 <td>删除指定元素,返回值表示是否删除成功</td>
 </tr>
 <tr>
-<td>public E  remove(int   index)</td>
+<td>public E  remove(int   index)删</td>
 <td>删除指定索引处的元素，返回被删除的元素</td>
 </tr>
 <tr>
-<td>public E   set(int index,E   element)</td>
+<td>public E   set(int index,E   element)改</td>
 <td>修改指定索引处的元素，返回被修改的元素</td>
 </tr>
 <tr>
-<td>public E   get(int   index)</td>
+<td>public E   get(int   index)查</td>
 <td>返回指定索引处的元素</td>
 </tr>
 <tr>
@@ -352,13 +372,59 @@
 <td>返回集合中的元素的个数</td>
 </tr>
 </tbody></table>
-<h4 id="1-2-3-示例代码"><a href="#1-2-3-示例代码" class="headerlink" title="1.2.3 示例代码"></a>1.2.3 示例代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ArrayListDemo02</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//创建集合</span></span><br><span class="line">        ArrayList&lt;String&gt; array = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;String&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//添加元素</span></span><br><span class="line">        array.add(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">        array.add(<span class="string">&quot;world&quot;</span>);</span><br><span class="line">        array.add(<span class="string">&quot;java&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//public boolean remove(Object o)：删除指定的元素，返回删除是否成功</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.remove(&quot;world&quot;));</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.remove(&quot;javaee&quot;));</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//public E remove(int index)：删除指定索引处的元素，返回被删除的元素</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.remove(1));</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//IndexOutOfBoundsException</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.remove(3));</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//public E set(int index,E element)：修改指定索引处的元素，返回被修改的元素</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.set(1,&quot;javaee&quot;));</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//IndexOutOfBoundsException</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.set(3,&quot;javaee&quot;));</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//public E get(int index)：返回指定索引处的元素</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.get(0));</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.get(1));</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.get(2));</span></span><br><span class="line">        <span class="comment">//System.out.println(array.get(3)); //？？？？？？ 自己测试</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//public int size()：返回集合中的元素的个数</span></span><br><span class="line">        System.out.println(array.size());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//输出集合</span></span><br><span class="line">        System.out.println(<span class="string">&quot;array:&quot;</span> + array);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="1-2-3-示例代码"><a href="#1-2-3-示例代码" class="headerlink" title="1.2.3 示例代码"></a>1.2.3 示例代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ArrayListDemo02</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//创建集合</span></span><br><span class="line">        ArrayList&lt;String&gt; array = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;String&gt;();</span><br><span class="line">		<span class="comment">//此时输出 []</span></span><br><span class="line">        <span class="comment">///此时我们创建的是ArrayList的对象，而ArrayList是java已经写好的一个类</span></span><br><span class="line">        <span class="comment">//这个类在底层做了一些处理</span></span><br><span class="line">        <span class="comment">//打印对象不是地址值，而是集合中存储数据内容</span></span><br><span class="line">        <span class="comment">//在展示的时候会拿[]把所有的数据进行包裹</span></span><br><span class="line">        <span class="comment">//添加元素</span></span><br><span class="line">        array.add(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">        array.add(<span class="string">&quot;world&quot;</span>);</span><br><span class="line">        array.add(<span class="string">&quot;java&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//public boolean remove(Object o)：删除指定的元素，返回删除是否成功</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.remove(&quot;world&quot;));</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.remove(&quot;javaee&quot;));</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//public E remove(int index)：删除指定索引处的元素，返回被删除的元素</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.remove(1));</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//IndexOutOfBoundsException</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.remove(3));</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//public E set(int index,E element)：修改指定索引处的元素，返回被修改的元素</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.set(1,&quot;javaee&quot;));</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//IndexOutOfBoundsException</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.set(3,&quot;javaee&quot;));</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//public E get(int index)：返回指定索引处的元素</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.get(0));</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.get(1));</span></span><br><span class="line">        <span class="comment">//        System.out.println(array.get(2));</span></span><br><span class="line">        <span class="comment">//System.out.println(array.get(3)); //？？？？？？ 自己测试</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//public int size()：返回集合中的元素的个数</span></span><br><span class="line">        System.out.println(array.size());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//输出集合</span></span><br><span class="line">        System.out.println(<span class="string">&quot;array:&quot;</span> + array);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-3-基本数据类型的对应包装类"><a href="#1-3-基本数据类型的对应包装类" class="headerlink" title="1.3 基本数据类型的对应包装类"></a>1.3 基本数据类型的对应包装类</h3><table>
+<thead>
+<tr>
+<th>基本数据类型</th>
+<th>包装类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>short</td>
+<td>Short</td>
+</tr>
+<tr>
+<td><strong>==char==</strong></td>
+<td>==<strong>Character</strong>==</td>
+</tr>
+<tr>
+<td>==<strong>int</strong>== jdk5 之后int 与Integer 可以相互转化</td>
+<td>==<strong>Integer</strong>==</td>
+</tr>
+<tr>
+<td>long</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>float</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Boolean</td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;integer&gt;list <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.添加元素</span></span><br><span class="line">/jdk5以后<span class="type">int</span> Integer之间是可以互相转化的</span><br><span class="line">list.add(<span class="number">1</span>);</span><br><span class="line">list.add(<span class="number">2</span>);</span><br><span class="line">list.add(<span class="number">3</span>);</span><br><span class="line">list.add(<span class="number">4</span>);</span><br><span class="line">list.add(<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+
 
 <h3 id="1-3-ArrayList存储字符串并遍历"><a href="#1-3-ArrayList存储字符串并遍历" class="headerlink" title="1.3 ArrayList存储字符串并遍历"></a>1.3 ArrayList存储字符串并遍历</h3><h4 id="1-3-1-案例需求"><a href="#1-3-1-案例需求" class="headerlink" title="1.3.1 案例需求"></a>1.3.1 案例需求</h4><p>​    创建一个存储字符串的集合，存储3个字符串元素，使用程序实现在控制台遍历该集合</p>
 <h4 id="1-3-2-代码实现"><a href="#1-3-2-代码实现" class="headerlink" title="1.3.2 代码实现"></a>1.3.2 代码实现</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ArrayListDemo3</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//1.创建集合对象</span></span><br><span class="line">        ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//2.添加元素</span></span><br><span class="line">        list.add(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;bbb&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;ccc&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;ddd&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//3.遍历</span></span><br><span class="line">        <span class="comment">//快捷键: list.fori 正向遍历</span></span><br><span class="line">        <span class="comment">//list.forr 倒着遍历</span></span><br><span class="line">        System.out.print(<span class="string">&quot;[&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; list.size(); i++) &#123;</span><br><span class="line">            <span class="comment">//i 依次表示集合里面的每一个索引</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(i == list.size() - <span class="number">1</span>)&#123;</span><br><span class="line">                <span class="comment">//最大索引</span></span><br><span class="line">                System.out.print(list.get(i));</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="comment">//非最大索引</span></span><br><span class="line">                System.out.print(list.get(i) + <span class="string">&quot;, &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print(<span class="string">&quot;]&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="1-4-ArrayList存储学生对象并遍历"><a href="#1-4-ArrayList存储学生对象并遍历" class="headerlink" title="1.4 ArrayList存储学生对象并遍历"></a>1.4 ArrayList存储学生对象并遍历</h3><h4 id="1-4-1-案例需求"><a href="#1-4-1-案例需求" class="headerlink" title="1.4.1 案例需求"></a>1.4.1 案例需求</h4><p>​    创建一个存储学生对象的集合，存储3个学生对象，使用程序实现在控制台遍历该集合</p>
-<h4 id="1-4-2-代码实现"><a href="#1-4-2-代码实现" class="headerlink" title="1.4.2 代码实现"></a>1.4.2 代码实现</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ArrayListDemo4</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//1.创建集合对象，用来存储数据</span></span><br><span class="line">        ArrayList&lt;Student&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//2.创建学生对象</span></span><br><span class="line">        <span class="type">Student</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;zhangsan&quot;</span>,<span class="number">16</span>);</span><br><span class="line">        <span class="type">Student</span> <span class="variable">s2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;lisi&quot;</span>,<span class="number">15</span>);</span><br><span class="line">        <span class="type">Student</span> <span class="variable">s3</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;wangwu&quot;</span>,<span class="number">18</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//3.把学生对象添加到集合中</span></span><br><span class="line">        list.add(s1);</span><br><span class="line">        list.add(s2);</span><br><span class="line">        list.add(s3);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//4.遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; list.size(); i++) &#123;</span><br><span class="line">            <span class="comment">//i 依次表示集合中的每一个索引</span></span><br><span class="line">            <span class="type">Student</span> <span class="variable">stu</span> <span class="operator">=</span> list.get(i);</span><br><span class="line">            System.out.println(stu.getName() + <span class="string">&quot;, &quot;</span> + stu.getAge());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="1-4-2-代码实现"><a href="#1-4-2-代码实现" class="headerlink" title="1.4.2 代码实现"></a>1.4.2 代码实现</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ArrayListDemo4</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//1.创建集合对象，用来存储数据</span></span><br><span class="line">        ArrayList&lt;Student&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//2.创建学生对象</span></span><br><span class="line">        <span class="type">Student</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;zhangsan&quot;</span>,<span class="number">16</span>);</span><br><span class="line">        <span class="type">Student</span> <span class="variable">s2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;lisi&quot;</span>,<span class="number">15</span>);</span><br><span class="line">        <span class="type">Student</span> <span class="variable">s3</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;wangwu&quot;</span>,<span class="number">18</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//3.把学生对象添加到集合中</span></span><br><span class="line">        list.add(s1);</span><br><span class="line">        list.add(s2);</span><br><span class="line">        list.add(s3);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//4.遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; list.size(); i++) &#123;</span><br><span class="line">            <span class="comment">//i 依次表示集合中的每一个索引</span></span><br><span class="line">            <span class="type">Student</span> <span class="variable">stu</span> <span class="operator">=</span> list.get(i);</span><br><span class="line">            System.out.println(stu.getName() + <span class="string">&quot;, &quot;</span> + stu.getAge());</span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">		for (int i = 0; i &lt; list.size(); i++) &#123;</span></span><br><span class="line"><span class="comment">            Student stu = list.get(i);</span></span><br><span class="line"><span class="comment">            System.out.println(stu);</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        输出结果为：</span></span><br><span class="line"><span class="comment">        Student&#123;name = zhangsan, age = 23&#125;</span></span><br><span class="line"><span class="comment">		Student&#123;name = lisi, age = 24&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="1-5-查找用户的索引"><a href="#1-5-查找用户的索引" class="headerlink" title="1.5 查找用户的索引"></a>1.5 查找用户的索引</h3><p>需求： </p>
 <p>1，main方法中定义一个集合，存入三个用户对象。 </p>
@@ -373,7 +439,7 @@
 
 
 
-
+<h3 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test5</span> &#123;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[]args)</span>&#123;</span><br><span class="line">	<span class="comment">//1.创建集合</span></span><br><span class="line">	ArrayList&lt;Student&gt;list <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">	<span class="comment">//长度为0</span></span><br><span class="line">	<span class="comment">//2.键盘录入学生的信息并添加到集合当中</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>;i&lt;list.size();i++) &#123;</span><br><span class="line">	System.out.println(<span class="string">&quot;看看我执行了吗？&quot;</span>)；</span><br><span class="line">	Student s <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">	list.add(s);</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="comment">//集合里面是否有学生对象</span></span><br><span class="line">	<span class="comment">//f</span></span><br><span class="line">	System.out.println(list.size());<span class="comment">//0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -964,6 +1030,22 @@ public StringJoiner(间隔符号，开始符号，结束符号)创建一个Strin
 <p>使用：</p>
 <p><img src="/2023/01/02/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/image-20230103215018967.png" alt="image-20230103215018967"></p>
 <p>这插件真香！！！</p>
+<p><strong>或者</strong>  ****</p>
+<p>alt + insert </p>
+<p>1.按两下tab，一下回车</p>
+<p>第一下tab是取消默认nameString属性</p>
+<p><img src="/2023/01/02/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/image-20230105222516513.png" alt="image-20230105222516513"></p>
+<p>第二下，让select None 背景变蓝</p>
+<p><img src="/2023/01/02/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/image-20230105222609257.png" alt="image-20230105222609257"></p>
+<p>添加构造函数</p>
+<p>再按一下 alt + insert </p>
+<p>然后ctrl + A全选 再按回车</p>
+<p><img src="/2023/01/02/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/image-20230105222726607.png" alt="image-20230105222726607"></p>
+<p>alt + insert</p>
+<p>选择第四个</p>
+<p><img src="/2023/01/02/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/image-20230105222827679.png" alt="image-20230105222827679"></p>
+<p>然后ctrl+A 全选，回车</p>
+<p>标准的javaBean创建成功</p>
 
       
     </div>
@@ -2608,7 +2690,12 @@ public StringJoiner(间隔符号，开始符号，结束符号)创建一个Strin
 <p>或者alt + 回车</p>
 <p>2.for循环快速写法</p>
 <p>String类：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;abc&quot;</span>;</span><br><span class="line">str.length().forr  <span class="comment">//出现逆遍历</span></span><br><span class="line">str.length().fori  <span class="comment">//出现遍历</span></span><br><span class="line">    t</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;abc&quot;</span>;</span><br><span class="line">str.length().forr  <span class="comment">//出现逆遍历</span></span><br><span class="line">str.length().fori  <span class="comment">//出现遍历</span></span><br><span class="line">    s</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.输入psvm即可打印出</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
