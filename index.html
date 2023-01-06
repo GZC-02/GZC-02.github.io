@@ -264,6 +264,100 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-学生管理系统" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/01/06/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" class="article-date">
+      <time datetime="2023-01-06T11:17:01.000Z" itemprop="datePublished">2023-01-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/01/06/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">学生管理系统</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="学生管理系统"><a href="#学生管理系统" class="headerlink" title="学生管理系统"></a>学生管理系统</h2><h3 id="需求："><a href="#需求：" class="headerlink" title="需求："></a>需求：</h3><p>​    采取控制台的方式去书写学生管理系统。</p>
+<h3 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h3><h4 id="初始菜单："><a href="#初始菜单：" class="headerlink" title="初始菜单："></a>初始菜单：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;-------------欢迎来到黑马学生管理系统----------------&quot;</span></span><br><span class="line"><span class="string">&quot;1：添加学生&quot;</span></span><br><span class="line"><span class="string">&quot;2：删除学生&quot;</span></span><br><span class="line"><span class="string">&quot;3：修改学生&quot;</span></span><br><span class="line"><span class="string">&quot;4：查询学生&quot;</span></span><br><span class="line"><span class="string">&quot;5：退出&quot;</span></span><br><span class="line"><span class="string">&quot;请输入您的选择:&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="学生类："><a href="#学生类：" class="headerlink" title="学生类："></a>学生类：</h4><p>​    属性：id、姓名、年龄、家庭住址</p>
+<h4 id="添加功能："><a href="#添加功能：" class="headerlink" title="添加功能："></a>添加功能：</h4><p>​    键盘录入每一个学生信息并添加，需要满足以下要求：</p>
+<ul>
+<li>id唯一</li>
+</ul>
+<h4 id="删除功能："><a href="#删除功能：" class="headerlink" title="删除功能："></a>删除功能：</h4><p>​    键盘录入要删除的学生id，需要满足以下要求：</p>
+<ul>
+<li>id存在删除</li>
+<li>id不存在，需要提示不存在，并回到初始菜单</li>
+</ul>
+<h4 id="修改功能："><a href="#修改功能：" class="headerlink" title="修改功能："></a>修改功能：</h4><p>​    键盘录入要修改的学生id，需要满足以下要求</p>
+<ul>
+<li>id存在，继续录入其他信息</li>
+<li>id不存在，需要提示不存在，并回到初始菜单</li>
+</ul>
+<h4 id="查询功能："><a href="#查询功能：" class="headerlink" title="查询功能："></a>查询功能：</h4><p>​    打印所有的学生信息，需要满足以下要求</p>
+<ul>
+<li>如果没有学生信息，提示：当前无学生信息，请添加后再查询</li>
+<li>如果有学生信息，需要按照以下格式输出。（不用过于纠结对齐的问题）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">id			姓名		年龄		家庭住址</span><br><span class="line">heima001	张三		<span class="number">23</span>		 南京</span><br><span class="line">heima002	李四		<span class="number">24</span>		 北京</span><br><span class="line">heima003	王五		<span class="number">25</span>		 广州</span><br><span class="line">heima004	赵六	 	<span class="number">26</span>		 深圳</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.Demo6;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line">    <span class="keyword">private</span> String address;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Student</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Student</span><span class="params">(String id, String name, <span class="type">int</span> age, String address)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.id = id;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">        <span class="built_in">this</span>.address = address;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> id</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getId</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 设置</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> id</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setId</span><span class="params">(String id)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> name</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 设置</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> name</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> age</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getAge</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 设置</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> age</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAge</span><span class="params">(<span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> address</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getAddress</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> address;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 设置</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> address</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAddress</span><span class="params">(String address)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.address = address;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Student&#123;id = &quot;</span> + id + <span class="string">&quot;, name = &quot;</span> + name + <span class="string">&quot;, age = &quot;</span> + age + <span class="string">&quot;, address = &quot;</span> + address + <span class="string">&quot;&#125;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/java%E5%85%A5%E9%97%A8/">java入门</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-集合" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -293,7 +387,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="1-集合（ArrayList）"><a href="#1-集合（ArrayList）" class="headerlink" title="1. 集合（ArrayList）"></a>1. 集合（ArrayList）</h2><h3 id="1-1-概念"><a href="#1-1-概念" class="headerlink" title="1.1 概念"></a>1.1 概念</h3><ul>
+        <p>[TOC]</p>
+<h2 id="1-集合（ArrayList）"><a href="#1-集合（ArrayList）" class="headerlink" title="1. 集合（ArrayList）"></a>1. 集合（ArrayList）</h2><h3 id="1-1-概念"><a href="#1-1-概念" class="headerlink" title="1.1 概念"></a>1.1 概念</h3><ul>
 <li><p>什么是集合</p>
 <p>​    提供一种存储空间可变的存储模型，存储的数据容量可以发生改变</p>
 </li>
@@ -432,6 +527,7 @@
 <p>2，要求：定义一个方法，根据id查找对应的学生信息。</p>
 <p>   如果存在，返回索引</p>
 <p>   如果不存在，返回-1</p>
+<p><strong>注意</strong><br>        ==如果我们要返回多个数据，可以把这些数据先放到一个容器当中，再把容器返回==<br>==集合数组。==</p>
 <p>代码示例：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ArrayListDemo6</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">/*需求：</span></span><br><span class="line"><span class="comment">        1，main方法中定义一个集合，存入三个用户对象。</span></span><br><span class="line"><span class="comment">        用户属性为：id，username，password</span></span><br><span class="line"><span class="comment">        2，要求：定义一个方法，根据id查找对应的学生信息。</span></span><br><span class="line"><span class="comment">        如果存在，返回索引</span></span><br><span class="line"><span class="comment">        如果不存在，返回-1*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//1.创建集合对象</span></span><br><span class="line">        ArrayList&lt;User&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//2.创建用户对象</span></span><br><span class="line">        <span class="type">User</span> <span class="variable">u1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User</span>(<span class="string">&quot;heima001&quot;</span>, <span class="string">&quot;zhangsan&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="type">User</span> <span class="variable">u2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User</span>(<span class="string">&quot;heima002&quot;</span>, <span class="string">&quot;lisi&quot;</span>, <span class="string">&quot;1234&quot;</span>);</span><br><span class="line">        <span class="type">User</span> <span class="variable">u3</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User</span>(<span class="string">&quot;heima003&quot;</span>, <span class="string">&quot;wangwu&quot;</span>, <span class="string">&quot;1234qwer&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//3.把用户对象添加到集合当中</span></span><br><span class="line">        list.add(u1);</span><br><span class="line">        list.add(u2);</span><br><span class="line">        list.add(u3);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//4.调用方法，通过id获取对应的索引</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> getIndex(list, <span class="string">&quot;heima001&quot;</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(index);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//1.我要干嘛？  根据id查找对应的学生信息</span></span><br><span class="line">    <span class="comment">//2.我干这件事情需要什么才能完成？   集合 id</span></span><br><span class="line">    <span class="comment">//3.方法的调用处是否需要继续使用方法的结果？</span></span><br><span class="line">    <span class="comment">//要用必须返回，不要用可以返回也可以不返回</span></span><br><span class="line">    <span class="comment">//明确说明需要有返回值 int</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">getIndex</span><span class="params">(ArrayList&lt;User&gt; list, String id)</span> &#123;</span><br><span class="line">        <span class="comment">//遍历集合得到每一个元素</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; list.size(); i++) &#123;</span><br><span class="line">            <span class="type">User</span> <span class="variable">u</span> <span class="operator">=</span> list.get(i);</span><br><span class="line">            <span class="type">String</span> <span class="variable">uid</span> <span class="operator">=</span> u.getId();</span><br><span class="line">            <span class="keyword">if</span>(uid.equals(id))&#123;</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//因为只有当集合里面所有的元素都比较完了，才能断定id是不存在的。</span></span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -443,9 +539,6 @@
 
 
 
-
-
-<h2 id="2-学生管理系统"><a href="#2-学生管理系统" class="headerlink" title="2.学生管理系统"></a>2.学生管理系统</h2>
       
     </div>
     
@@ -2130,582 +2223,6 @@ public StringJoiner(间隔符号，开始符号，结束符号)创建一个Strin
       
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/javaWeb/">javaWeb</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-idea" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2022/12/28/idea/" class="article-date">
-      <time datetime="2022-12-28T13:04:43.000Z" itemprop="datePublished">2022-12-28</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/12/28/idea/">idea</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="8-IDEA"><a href="#8-IDEA" class="headerlink" title="8. IDEA"></a>8. IDEA</h2><h3 id="8-1-IDEA概述"><a href="#8-1-IDEA概述" class="headerlink" title="8.1 IDEA概述"></a>8.1 IDEA概述</h3><p>​    IDEA全称IntelliJ IDEA，是用于Java语言开发的集成环境，它是业界公认的目前用于Java程序开发最好的工具。</p>
-<p><strong>集成环境：</strong></p>
-<p>​    把代码编写，编译，执行，调试等多种功能综合到一起的开发工具。</p>
-<h3 id="8-2-IDEA的下载和安装"><a href="#8-2-IDEA的下载和安装" class="headerlink" title="8.2 IDEA的下载和安装"></a>8.2 IDEA的下载和安装</h3><h4 id="8-2-1-下载"><a href="#8-2-1-下载" class="headerlink" title="8.2.1 下载"></a>8.2.1 下载</h4><p>​    可以到官方网站自行下载，网址为：<a target="_blank" rel="noopener" href="https://www.jetbrains.com/idea">https://www.jetbrains.com/idea</a></p>
-<p>​    今天的资料中，对应的安装包也提高给大家了。</p>
-<h4 id="8-2-2-安装"><a href="#8-2-2-安装" class="headerlink" title="8.2.2 安装"></a>8.2.2 安装</h4><ul>
-<li>到资料文件夹中，双击安装包。</li>
-<li>点击next，准备安装</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea%E5%AE%89%E8%A3%851.png" alt="计算机发展"></p>
-<ul>
-<li><p>点击Browse修改安装路径。</p>
-<p>修改完毕点击next</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea%E5%AE%89%E8%A3%852.png" alt="计算机发展"></p>
-<ul>
-<li><p>勾选64-bit launcher。表示在桌面新建一个64位的快捷方式。</p>
-<p>其他的不要勾选。</p>
-<p>点击next。</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea%E5%AE%89%E8%A3%854.png" alt="计算机发展"></p>
-<ul>
-<li>点击Install，准备安装。</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea%E5%AE%89%E8%A3%855.png" alt="计算机发展"></p>
-<ul>
-<li><p>等进度条读取完毕之后，会有最终界面提示。</p>
-<p>点击finish即可。</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea%E5%AE%89%E8%A3%856.png" alt="计算机发展"></p>
-<ul>
-<li><p>第一次启动会询问，是否导入一些设置。</p>
-<p>选择第二个不导入，保持默认设置，再点击OK。</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea%E5%AE%89%E8%A3%857.png" alt="计算机发展"></p>
-<ul>
-<li><p>选择背景主题</p>
-<p>左边是黑色背景。右边是白色背景。</p>
-<p>这个可以根据自己的喜好来选择。</p>
-<p>选择完毕点击右下角的next</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea%E5%AE%89%E8%A3%858.png" alt="计算机发展"></p>
-<ul>
-<li><p>在本界面让我们购买idea。</p>
-<p>因为我们是学习阶段，所以可以使用免费使用30天。</p>
-<p>点击第一排第二个。Evaluate for free</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea%E5%AE%89%E8%A3%859.png" alt="计算机发展"></p>
-<ul>
-<li>点击蓝色的Evaluate，就可以开始免费试用30天了。</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea%E5%AE%89%E8%A3%8510.png" alt="计算机发展"></p>
-<ul>
-<li><p>当看到这个界面，就表示idea已经成功安装完毕</p>
-<p>可以点击右上角关闭。</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea%E5%AE%89%E8%A3%8511.png" alt="计算机发展"></p>
-<h3 id="8-3-IDEA中层级结构介绍"><a href="#8-3-IDEA中层级结构介绍" class="headerlink" title="8.3 IDEA中层级结构介绍"></a>8.3 IDEA中层级结构介绍</h3><h4 id="8-3-1-结构分类"><a href="#8-3-1-结构分类" class="headerlink" title="8.3.1 结构分类"></a>8.3.1 结构分类</h4><ul>
-<li>project（项目、工程）</li>
-<li>module（模块）</li>
-<li>package（包）</li>
-<li>class（类）</li>
-</ul>
-<h4 id="8-3-2-结构介绍"><a href="#8-3-2-结构介绍" class="headerlink" title="8.3.2 结构介绍"></a>8.3.2 结构介绍</h4><p>​    为了让大家更好的吸收，package这一层级，我们后面再学习，先学习最基础的project、module、class。</p>
-<h5 id="project（项目、工程）"><a href="#project（项目、工程）" class="headerlink" title="project（项目、工程）"></a>project（项目、工程）</h5><p>​    淘宝、京东、黑马程序员网站都属于一个个项目，IDEA中就是一个个的Project。</p>
-<h5 id="module（模块）"><a href="#module（模块）" class="headerlink" title="module（模块）"></a>module（模块）</h5><p>​    在一个项目中，可以存放多个模块，不同的模块可以存放项目中不同的业务功能代码。在黑马程序员的官方网站中，至少包含了以下模块：</p>
-<ul>
-<li>论坛模块</li>
-<li>报名、咨询模块</li>
-</ul>
-<p>为了更好的管理代码，我们会把代码分别放在两个模块中存放。</p>
-<h5 id="package（包）"><a href="#package（包）" class="headerlink" title="package（包）"></a>package（包）</h5><p>​    一个模块中又有很多的业务，以黑马程序员官方网站的论坛模块为例，至少包含了以下不同的业务。</p>
-<ul>
-<li>发帖</li>
-<li>评论</li>
-</ul>
-<p>为了把这些业务区分的更加清楚，就会用包来管理这些不同的业务。</p>
-<h5 id="class（类）"><a href="#class（类）" class="headerlink" title="class（类）"></a>class（类）</h5><p>​    就是真正写代码的地方。</p>
-<h4 id="8-3-3-小结"><a href="#8-3-3-小结" class="headerlink" title="8.3.3 小结"></a>8.3.3 小结</h4><ul>
-<li><p>层级关系</p>
-<p>​    project - module - package - class</p>
-</li>
-<li><p>包含数量</p>
-<p>​    project中可以创建多个module<br>​    module中可以创建多个package<br>​    package中可以创建多个class</p>
-<p>​    这些结构的划分，是为了方便管理类文件的。</p>
-</li>
-</ul>
-<h3 id="8-4-IDEA中的第一个代码"><a href="#8-4-IDEA中的第一个代码" class="headerlink" title="8.4 IDEA中的第一个代码"></a>8.4 IDEA中的第一个代码</h3><h5 id="8-4-1-操作步骤"><a href="#8-4-1-操作步骤" class="headerlink" title="8.4.1 操作步骤"></a>8.4.1 操作步骤</h5><ul>
-<li>创建Project 项目</li>
-<li>创建Module 模块</li>
-<li>创建class   类</li>
-<li>在类中编写代码</li>
-<li>完成编译运行</li>
-</ul>
-<h5 id="8-4-2-分步图解"><a href="#8-4-2-分步图解" class="headerlink" title="8.4.2 分步图解"></a>8.4.2 分步图解</h5><ul>
-<li><p>双击启动图标</p>
-<p><img src="/2022/12/28/idea/idea%E4%BD%BF%E7%94%A81.png" alt="计算机发展"></p>
-</li>
-<li><p>首先要新建一个项目</p>
-<p>点击creat new project</p>
-<p><img src="/2022/12/28/idea/idea1.png" alt="计算机发展"></p>
-</li>
-<li><p>我们要从0开始写代码，所以新建一个空的什么都没有的项目。</p>
-<p>点击左下方的Empty Project</p>
-<p>再点击右下角的next</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea2.png" alt="计算机发展"></p>
-<ul>
-<li><p>输入项目的名称</p>
-<p>输入项目的存放路径</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea3.png" alt="计算机发展"></p>
-<ul>
-<li>点击ok。idea会帮助我们在本地创建一个项目文件夹</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea4.png" alt="计算机发展"></p>
-<ul>
-<li>点击Module，准备新建一个模块</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea5.png" alt="计算机发展"></p>
-<ul>
-<li><p>点击+</p>
-<p>再点击New Module</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea6.png" alt="计算机发展"></p>
-<ul>
-<li><p>我们要编写Java代码，所以要新建一个Java模块。</p>
-<p>点击Java</p>
-<p>再点击右下角的next</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea7.png" alt="计算机发展"></p>
-<ul>
-<li><p>输入模块的名称</p>
-<p>再点击右下角的Next</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea8.png" alt="计算机发展"></p>
-<ul>
-<li><p>成功新建一个模块之后，中间就会出现刚刚新建的模块</p>
-<p>点击右下角的OK</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea9.png" alt="计算机发展"></p>
-<ul>
-<li><p>回到主界面</p>
-<p>展开刚刚新建的模块</p>
-<p>右键点击src，选择New，选择Java Class</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea10.png" alt="计算机发展"></p>
-<ul>
-<li><p>输入类名</p>
-<p>再按回车</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea11.png" alt="计算机发展"></p>
-<ul>
-<li><p>由于字体比较小</p>
-<p>所以，我们要设置一下字体。</p>
-<p>点击File，选择Setting。</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea12.png" alt="计算机发展"></p>
-<ul>
-<li><p>搜索一下font</p>
-<p>在右边可以输入Size的数值来调节代码字体的大小。</p>
-<p>设置完毕后点击右下角的OK</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea13.png" alt="计算机发展"></p>
-<ul>
-<li>编写代码</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea14.png" alt="计算机发展"></p>
-<ul>
-<li><p>运行代码</p>
-<p>右键空白处，点击Run</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea15.png" alt="计算机发展"></p>
-<ul>
-<li><p>最下面会弹出控制台。</p>
-<p>所有输出语句中的内容，都会在控制台上展示。</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/idea16.png" alt="计算机发展"></p>
-<h3 id="8-5-IDEA中类的相关操作"><a href="#8-5-IDEA中类的相关操作" class="headerlink" title="8.5 IDEA中类的相关操作"></a>8.5 IDEA中类的相关操作</h3><h4 id="8-5-1-类的相关操作"><a href="#8-5-1-类的相关操作" class="headerlink" title="8.5.1 类的相关操作"></a>8.5.1 类的相关操作</h4><ul>
-<li>新建类文件</li>
-<li>删除类文件</li>
-<li>修改类文件</li>
-</ul>
-<h4 id="8-5-2-新建类文件"><a href="#8-5-2-新建类文件" class="headerlink" title="8.5.2 新建类文件"></a>8.5.2 新建类文件</h4><ul>
-<li><p>所有的Java代码都会写在src文件夹当中。</p>
-<p>所以，右键点击src，选择new，点击Java Class</p>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E7%B1%BB1.png" alt="计算机发展"></p>
-</li>
-<li><p>输入类名，再按回车</p>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E7%B1%BB2.png" alt="计算机发展"></p>
-</li>
-<li><p>新建完毕</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E7%B1%BB3.png" alt="计算机发展"></p>
-<h4 id="8-5-3-修改类名"><a href="#8-5-3-修改类名" class="headerlink" title="8.5.3 修改类名"></a>8.5.3 修改类名</h4><ul>
-<li><p>右键点击想要修改的文件</p>
-<p>点击Refactor</p>
-<p>再点击Rename</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E4%BF%AE%E6%94%B9%E7%B1%BB%E5%90%8D1.png" alt="计算机发展"></p>
-<ul>
-<li><p>输入想要修改的名字</p>
-<p>输入完毕点击下面的Refactor</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E4%BF%AE%E6%94%B9%E7%B1%BB%E5%90%8D2.png" alt="计算机发展"></p>
-<ul>
-<li><p>文件名和类名均已修改成功</p>
-<p><img src="/2022/12/28/idea/%E4%BF%AE%E6%94%B9%E7%B1%BB%E5%90%8D3.png" alt="计算机发展"></p>
-</li>
-</ul>
-<h4 id="8-5-4-删除类文件"><a href="#8-5-4-删除类文件" class="headerlink" title="8.5.4 删除类文件"></a>8.5.4 删除类文件</h4><ul>
-<li><p>想要删除哪个文件，就右键点击该文件</p>
-<p>选择Delete即可</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%88%A0%E9%99%A4%E7%B1%BB%E6%96%87%E4%BB%B61.png" alt="计算机发展"></p>
-<ul>
-<li>在弹出的界面中点击OK，确定删除</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%88%A0%E9%99%A4%E7%B1%BB%E6%96%87%E4%BB%B62.png" alt="计算机发展"></p>
-<blockquote>
-<p>小贴士：</p>
-<p>此时删除是不走回收站的，直接从硬盘中删掉了。</p>
-</blockquote>
-<h3 id="8-6-IDEA中模块的相关操作"><a href="#8-6-IDEA中模块的相关操作" class="headerlink" title="8.6 IDEA中模块的相关操作"></a>8.6 IDEA中模块的相关操作</h3><h4 id="8-6-1-模块的相关操作"><a href="#8-6-1-模块的相关操作" class="headerlink" title="8.6.1 模块的相关操作"></a>8.6.1 模块的相关操作</h4><ul>
-<li>新建模块</li>
-<li>删除模块</li>
-<li>修改模块</li>
-<li>导入模块</li>
-</ul>
-<h4 id="8-6-2-新建模块"><a href="#8-6-2-新建模块" class="headerlink" title="8.6.2 新建模块"></a>8.6.2 新建模块</h4><ul>
-<li>点击File，选择Project Structure</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E6%A8%A1%E5%9D%971.png" alt="计算机发展"></p>
-<ul>
-<li>选择Module</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E6%A8%A1%E5%9D%972.png" alt="计算机发展"></p>
-<ul>
-<li><p>点击+</p>
-<p>选择New Module</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E6%A8%A1%E5%9D%973.png" alt="计算机发展"></p>
-<ul>
-<li><p>要创建一个Java模块，所以选择第一个Java</p>
-<p>点击右下角的Next</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E6%A8%A1%E5%9D%974.png" alt="计算机发展"></p>
-<ul>
-<li><p>输入模块的名称</p>
-<p>点击右下角的Finish</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E6%A8%A1%E5%9D%975.png" alt="计算机发展"></p>
-<ul>
-<li><p>成功新建完毕之后，在中间空白区域就出现了刚刚新建的模块</p>
-<p>点击右下角的OK</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E6%A8%A1%E5%9D%976.png" alt="计算机发展"></p>
-<ul>
-<li>在主界面中，也会出现刚刚新建的模块</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E6%A8%A1%E5%9D%977.png" alt="计算机发展"></p>
-<h4 id="8-6-3-删除模块"><a href="#8-6-3-删除模块" class="headerlink" title="8.6.3 删除模块"></a>8.6.3 删除模块</h4><ul>
-<li><p>右键点击模块</p>
-<p>选择Remove Module</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%88%A0%E9%99%A4%E6%A8%A1%E5%9D%971.png" alt="计算机发展"></p>
-<ul>
-<li>选择Remove，表示确定删除</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%88%A0%E9%99%A4%E6%A8%A1%E5%9D%972.png" alt="计算机发展"></p>
-<ul>
-<li>此时发现，在IDEA列表页面，删除的模块已经不在了。</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%88%A0%E9%99%A4%E6%A8%A1%E5%9D%973.png" alt="计算机发展"></p>
-<blockquote>
-<p>小贴士：</p>
-<p>此时删除仅仅是从IDEA列表中的删除，在本地硬盘中还是存在的。</p>
-</blockquote>
-<h4 id="8-6-4-修改模块"><a href="#8-6-4-修改模块" class="headerlink" title="8.6.4 修改模块"></a>8.6.4 修改模块</h4><ul>
-<li><p>右键点击模块名</p>
-<p>选择Refactor</p>
-<p>再选择Rename</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E4%BF%AE%E6%94%B9%E6%A8%A1%E5%9D%97%E5%90%8D1.png" alt="计算机发展"></p>
-<ul>
-<li><p>选择第三个修改模块名和本地文件夹名</p>
-<p>点击OK</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E4%BF%AE%E6%94%B9%E6%A8%A1%E5%9D%97%E5%90%8D3.png" alt="计算机发展"></p>
-<ul>
-<li><p>输入要修改的新的模块名</p>
-<p>输入完毕点击Refactor</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E4%BF%AE%E6%94%B9%E6%A8%A1%E5%9D%97%E5%90%8D4.png" alt="计算机发展"></p>
-<ul>
-<li>回到主界面，就发现模块名和文件夹名都已经修改完毕</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E4%BF%AE%E6%94%B9%E6%A8%A1%E5%9D%97%E5%90%8D5.png" alt="计算机发展"></p>
-<h4 id="8-6-5-导入模块"><a href="#8-6-5-导入模块" class="headerlink" title="8.6.5 导入模块"></a>8.6.5 导入模块</h4><ul>
-<li>点击File，选择Project Structure</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%971.png" alt="计算机发展"></p>
-<ul>
-<li><p>选择Module</p>
-<p>点击+</p>
-<p>选择Import Module</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%972.png" alt="计算机发展"></p>
-<ul>
-<li><p>从本地硬盘中选择要导入的模块</p>
-<p>再点击OK</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%973.png" alt="计算机发展"></p>
-<ul>
-<li>不断点击Next</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%974.png" alt="计算机发展"></p>
-<ul>
-<li><p>如果中间出现提示框，则点击Overwrite</p>
-<p>然后继续点击右下角的Next</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%975.png" alt="计算机发展"></p>
-<ul>
-<li>一直点到finish为止</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%976.png" alt="计算机发展"></p>
-<ul>
-<li>成功导入后，在中间位置就会出现导入的模块信息</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%977.png" alt="计算机发展"></p>
-<ul>
-<li>在主界面中也会出现导入的模块信息</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%978.png" alt="计算机发展"></p>
-<ul>
-<li><p>展开模块点击模块中的Java文件，会发现代码报错。</p>
-<p>是因为导入模块跟JDK没有关联导致。</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%979.png" alt="计算机发展"></p>
-<ul>
-<li><p>可以点击右上角的Setup SDK</p>
-<p>再选择已经安装的JDK版本即可</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%9710.png" alt="计算机发展"></p>
-<ul>
-<li>导入完毕之后，代码就恢复正常不会报错了</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%9711.png" alt="计算机发展"></p>
-<h3 id="8-7-IDEA中项目的相关操作"><a href="#8-7-IDEA中项目的相关操作" class="headerlink" title="8.7 IDEA中项目的相关操作"></a>8.7 IDEA中项目的相关操作</h3><h4 id="8-7-1-项目的相关操作"><a href="#8-7-1-项目的相关操作" class="headerlink" title="8.7.1 项目的相关操作"></a>8.7.1 项目的相关操作</h4><ul>
-<li>关闭项目</li>
-<li>打开项目</li>
-<li>修改项目</li>
-<li>新建项目</li>
-</ul>
-<h4 id="8-7-2-关闭项目"><a href="#8-7-2-关闭项目" class="headerlink" title="8.7.2 关闭项目"></a>8.7.2 关闭项目</h4><ul>
-<li>点击File，选择Close Project即可</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%85%B3%E9%97%AD%E9%A1%B9%E7%9B%AE1.png" alt="计算机发展"></p>
-<ul>
-<li><p>刚刚操作的项目就已经关闭了</p>
-<p>左侧是项目列表，如果要再次打开该项目，直接点击即可。</p>
-<p>右侧有create new project，可以再建一个新的项目</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%85%B3%E9%97%AD%E9%A1%B9%E7%9B%AE2.png" alt="计算机发展"></p>
-<ul>
-<li><p>鼠标放在项目上，后面会出现一个叉。</p>
-<p>如果点击了这里的叉，会在IDEA的列表中删除。不会删除本地硬盘上的项目。</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%85%B3%E9%97%AD%E9%A1%B9%E7%9B%AE3.png" alt="计算机发展"></p>
-<h4 id="8-7-3-打开项目"><a href="#8-7-3-打开项目" class="headerlink" title="8.7.3 打开项目"></a>8.7.3 打开项目</h4><ul>
-<li><p>在本界面还可以打开本地已经存在的项目</p>
-<p>点击Open or Import</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE1.png" alt="计算机发展"></p>
-<ul>
-<li><p>选择要打开的项目</p>
-<p>点击OK</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE2.png" alt="计算机发展"></p>
-<ul>
-<li>项目就被打开了。</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE3.png" alt="计算机发展"></p>
-<h4 id="8-7-4-修改项目"><a href="#8-7-4-修改项目" class="headerlink" title="8.7.4 修改项目"></a>8.7.4 修改项目</h4><ul>
-<li>点击File，选择Project Structure</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E4%BF%AE%E6%94%B9%E9%A1%B9%E7%9B%AE1.png" alt="计算机发展"></p>
-<ul>
-<li><p>在这个界面，默认是Module</p>
-<p>所以，要先点击Project</p>
-<p>在右侧页面中，输入新的项目名称</p>
-<p>修改JDK版本和编译版本都变成JDK14</p>
-<p>再点击OK</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E4%BF%AE%E6%94%B9%E9%A1%B9%E7%9B%AE2.png" alt="计算机发展"></p>
-<ul>
-<li>此时发现，项目名称已经修改完毕</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E4%BF%AE%E6%94%B9%E9%A1%B9%E7%9B%AE3.png" alt="计算机发展"></p>
-<ul>
-<li>但是本地文件夹的名字还没有修改</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E4%BF%AE%E6%94%B9%E9%A1%B9%E7%9B%AE4.png" alt="计算机发展"></p>
-<ul>
-<li>需要先关闭当前项目</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%85%B3%E9%97%AD%E9%A1%B9%E7%9B%AE1.png" alt="计算机发展"></p>
-<ul>
-<li>点击项目后面的叉，从列表中移除项目</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E5%85%B3%E9%97%AD%E9%A1%B9%E7%9B%AE3.png" alt="计算机发展"></p>
-<ul>
-<li>到本地硬盘中手动修改文件夹的名称</li>
-</ul>
-<p> <img src="F:/JavaSE%E6%9C%80%E6%96%B0%E7%89%88/day02-Java%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E7%AC%94%E8%AE%B0/img/%E4%BF%AE%E6%94%B9%E9%A1%B9%E7%9B%AE5.png" alt="计算机发展"></p>
-<ul>
-<li>点击Open or Import重新打开项目</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE1.png" alt="计算机发展"></p>
-<ul>
-<li><p>选择修改之后的项目</p>
-<p>点击OK</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E4%BF%AE%E6%94%B9%E9%A1%B9%E7%9B%AE6.png" alt="计算机发展"></p>
-<ul>
-<li>此时会发现，项目名称和本地硬盘文件夹的名称都已经修改完毕了</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E4%BF%AE%E6%94%B9%E9%A1%B9%E7%9B%AE7.png" alt="计算机发展"></p>
-<h4 id="8-7-5-新建项目"><a href="#8-7-5-新建项目" class="headerlink" title="8.7.5 新建项目"></a>8.7.5 新建项目</h4><ul>
-<li><p>点击File</p>
-<p>选择New</p>
-<p>点击Project</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE1.png" alt="计算机发展"></p>
-<ul>
-<li>同样还是创建一个什么都没有的空项目</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE2.png" alt="计算机发展"></p>
-<ul>
-<li><p>输入项目的名称</p>
-<p>点击右下角的finish</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE3.png" alt="计算机发展"></p>
-<ul>
-<li><p>IDEA循环是否需要帮我们在本地创建一个新的文件夹</p>
-<p>点击OK</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE4.png" alt="计算机发展"></p>
-<ul>
-<li><p>询问是在本窗口打开还是在一个新的窗口打开。</p>
-<p>可以点击New Window，在一个新的窗口打开。</p>
-</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE5.png" alt="计算机发展"></p>
-<ul>
-<li>此时就出现了两个窗口，在一个新的窗口打开了新的项目</li>
-</ul>
-<p><img src="/2022/12/28/idea/%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE6.png" alt="计算机发展"></p>
-<p>快捷键</p>
-<p>1.快速定义变量</p>
-<p><img src="/2022/12/28/idea/image-20230103223445694.png" alt="image-20230103223445694"></p>
-<p>ctrl + alt + v</p>
-<p>或者alt + 回车</p>
-<p>2.for循环快速写法</p>
-<p>String类：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;abc&quot;</span>;</span><br><span class="line">str.length().forr  <span class="comment">//出现逆遍历</span></span><br><span class="line">str.length().fori  <span class="comment">//出现遍历</span></span><br><span class="line">    s</span><br></pre></td></tr></table></figure>
-
-
-
-<p>3.输入psvm即可打印出</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/java%E5%85%A5%E9%97%A8/">java入门</a>
     </div>
 
 
