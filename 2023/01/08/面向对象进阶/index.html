@@ -15,15 +15,15 @@
 
 
 
-<meta name="description" content="GZC的博客">
+<meta name="description" content="[TOC] 1.面向对象进阶1.1 static 静态变量1.1 概述以前我们定义过如下类： 12345678910111213141516public class Student &amp;#123;    &#x2F;&#x2F; 成员变量    public String name;    public char sex; &#x2F;&#x2F; &amp;#x27;男&amp;#x27;  &amp;#x27;女&amp;#x27;    public int ag">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Junit_测试概述">
-<meta property="og:url" content="http://example.com/2022/12/28/Junit-%E6%B5%8B%E8%AF%95%E6%A6%82%E8%BF%B0/index.html">
+<meta property="og:title" content="面向对象进阶">
+<meta property="og:url" content="http://example.com/2023/01/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/index.html">
 <meta property="og:site_name" content="GZC的博客">
-<meta property="og:description" content="GZC的博客">
+<meta property="og:description" content="[TOC] 1.面向对象进阶1.1 static 静态变量1.1 概述以前我们定义过如下类： 12345678910111213141516public class Student &amp;#123;    &#x2F;&#x2F; 成员变量    public String name;    public char sex; &#x2F;&#x2F; &amp;#x27;男&amp;#x27;  &amp;#x27;女&amp;#x27;    public int ag">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-12-28T13:34:31.000Z">
-<meta property="article:modified_time" content="2022-12-28T13:35:03.358Z">
+<meta property="article:published_time" content="2023-01-08T11:44:15.000Z">
+<meta property="article:modified_time" content="2023-01-08T12:12:48.989Z">
 <meta property="article:author" content="GZC">
 <meta name="twitter:card" content="summary">
 
@@ -59,7 +59,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Junit_测试概述 | GZC的博客</title>
+<title>面向对象进阶 | GZC的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -259,11 +259,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-Junit-测试概述" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-面向对象进阶" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/12/28/Junit-%E6%B5%8B%E8%AF%95%E6%A6%82%E8%BF%B0/" class="article-date">
-      <time datetime="2022-12-28T13:34:31.000Z" itemprop="datePublished">2022-12-28</time>
+      <a href="/2023/01/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/" class="article-date">
+      <time datetime="2023-01-08T11:44:15.000Z" itemprop="datePublished">2023-01-08</time>
 </a>
 
 
@@ -278,7 +278,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Junit_测试概述
+      面向对象进阶
     </h1>
   
 
@@ -287,7 +287,7 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/javaWeb/">javaWeb</a>
+    <a class="article-category-link" href="/categories/java%E5%85%A5%E9%97%A8/">java入门</a>
     </div>
 
 
@@ -299,7 +299,32 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <p>[TOC]</p>
+<h2 id="1-面向对象进阶"><a href="#1-面向对象进阶" class="headerlink" title="1.面向对象进阶"></a>1.面向对象进阶</h2><h3 id="1-1-static-静态变量"><a href="#1-1-static-静态变量" class="headerlink" title="1.1 static 静态变量"></a>1.1 static 静态变量</h3><h4 id="1-1-概述"><a href="#1-1-概述" class="headerlink" title="1.1 概述"></a>1.1 概述</h4><p>以前我们定义过如下类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    <span class="comment">// 成员变量</span></span><br><span class="line">    <span class="keyword">public</span> String name;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">char</span> sex; <span class="comment">// &#x27;男&#x27;  &#x27;女&#x27;</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 无参数构造方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Student</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 有参数构造方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Student</span><span class="params">(String  a)</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们已经知道面向对象中，存在类和对象的概念，我们在类中定义了一些成员变量，例如name,age,sex ,结果发现这些成员变量，每个对象都存在（因为每个对象都可以访问）。</p>
+<p>而像name ,age , sex确实是每个学生对象都应该有的属性，应该属于每个对象。</p>
+<p>所以Java中成员（<strong>变量和方法</strong>）等是存在所属性的，Java是通过static关键字来区分的。<strong>static关键字在Java开发非常的重要，对于理解面向对象非常关键。</strong></p>
+<p>关于 <code>static</code> 关键字的使用，它可以用来修饰的成员变量和成员方法，被static修饰的成员是<strong>属于类</strong>的是放在静态区中，没有static修饰的成员变量和方法则是<strong>属于对象</strong>的。我们上面案例中的<strong>成员变量都是没有static修饰的，所以属于每个对象。</strong></p>
+<h2 id="1-2-定义格式和使用"><a href="#1-2-定义格式和使用" class="headerlink" title="1.2 定义格式和使用"></a>1.2 定义格式和使用</h2><p><strong>static是静态的意思。 static可以修饰成员变量或者修饰方法。</strong></p>
+<h5 id="2-2-1-静态变量及其访问"><a href="#2-2-1-静态变量及其访问" class="headerlink" title="2.2.1 静态变量及其访问"></a>2.2.1 静态变量及其访问</h5><p>​         <strong>有static修饰成员变量，说明这个成员变量是属于类的，这个成员变量称为类变量或者静态（成员）变量。 直接用  类名访问即可</strong>。因为类只有一个，所以静态成员变量在内存区域中也只存在一份。所有的对象都可以共享这个变量。</p>
+<p><strong>如何使用呢</strong></p>
+<p>例如现在我们需要定义传智全部的学生类，那么这些学生类的对象的学校属性应该都是“传智”，这个时候我们可以把这个属性定义成static修饰的静态成员变量。</p>
+<p><strong>定义格式</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">修饰符 <span class="keyword">static</span> 数据类型 变量名 = 初始值；    </span><br></pre></td></tr></table></figure>
+
+<p><strong>举例</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">String</span> <span class="variable">schoolName</span> <span class="operator">=</span> <span class="string">&quot;传智播客&quot;</span>； <span class="comment">// 属于类，只有一份。</span></span><br><span class="line">    <span class="comment">// .....</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>静态成员变量的访问:</strong></p>
+<p>==<strong>格式：类名.静态变量</strong>==</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span>  <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    System.out.println(Student.schoolName); <span class="comment">// 传智播客</span></span><br><span class="line">    Student.schoolName = <span class="string">&quot;黑马程序员&quot;</span>;</span><br><span class="line">    System.out.println(Student.schoolName); <span class="comment">// 黑马程序员</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-2-2-实例变量及其访问"><a href="#1-2-2-实例变量及其访问" class="headerlink" title="1.2.2 实例变量及其访问"></a>1.2.2 实例变量及其访问</h5><p>无static修饰的成员变量属于每个对象的，  这个成员变量叫<strong>实例变量</strong>，之前我们写成员变量就是实例成员变量。</p>
+<p><strong>需要注意的是</strong>：实例成员变量属于每个对象，必须创建类的对象才可以访问。   </p>
+<p><strong>格式：对象.实例成员变量</strong></p>
+
       
     </div>
     
@@ -307,13 +332,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2022/12/28/Junit-%E6%B5%8B%E8%AF%95%E6%A6%82%E8%BF%B0/">Junit_测试概述</a></p>
+        <p><span>本文标题:</span><a href="/2023/01/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/">面向对象进阶</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页"></a></p>
-        <p><span>发布时间:</span>2022-12-28, 21:34:31</p>
-        <p><span>最后更新:</span>2022-12-28, 21:35:03</p>
+        <p><span>发布时间:</span>2023-01-08, 19:44:15</p>
+        <p><span>最后更新:</span>2023-01-08, 20:12:48</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2022/12/28/Junit-%E6%B5%8B%E8%AF%95%E6%A6%82%E8%BF%B0/" title="Junit_测试概述">http://example.com/2022/12/28/Junit-%E6%B5%8B%E8%AF%95%E6%A6%82%E8%BF%B0/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://example.com/2022/12/28/Junit-%E6%B5%8B%E8%AF%95%E6%A6%82%E8%BF%B0/　　作者: " title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2023/01/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/" title="面向对象进阶">http://example.com/2023/01/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://example.com/2023/01/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/　　作者: " title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -325,16 +350,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2022/12/28/java%E8%BF%90%E7%AE%97%E7%AC%A6/">
-                    java运算符
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2022/12/28/idea/">
-                    idea
+                <a href="/2023/01/07/%E5%8A%A8%E6%BC%AB/">
+                    动漫
                 </a>
             </div>
         
@@ -346,7 +365,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6"><span class="toc-number">1.</span> <span class="toc-text">1.面向对象进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-static-%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 static 静态变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 概述</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E5%AE%9A%E4%B9%89%E6%A0%BC%E5%BC%8F%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">1.2 定义格式和使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1-%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E8%AE%BF%E9%97%AE"><span class="toc-number">2.0.0.1.</span> <span class="toc-text">2.2.1 静态变量及其访问</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-%E5%AE%9E%E4%BE%8B%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E8%AE%BF%E9%97%AE"><span class="toc-number">2.0.0.2.</span> <span class="toc-text">1.2.2 实例变量及其访问</span></a></li></ol></li></ol></li></ol></li></ol>
         
     </div>
     <style>
@@ -382,7 +401,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Junit_测试概述　| GZC的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"面向对象进阶　| GZC的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -402,15 +421,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2022/12/28/java%E8%BF%90%E7%AE%97%E7%AC%A6/" title="上一篇: java运算符">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2022/12/28/idea/" title="下一篇: idea">
+            <a href="/2023/01/07/%E5%8A%A8%E6%BC%AB/" title="下一篇: 动漫">
                 <i class="fa fa-angle-right"></i>
             </a>
         
