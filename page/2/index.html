@@ -264,61 +264,6 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-综合练习" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2023/01/03/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/" class="article-date">
-      <time datetime="2023-01-03T14:45:50.000Z" itemprop="datePublished">2023-01-03</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/01/03/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/">综合练习</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-字符串" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -3258,6 +3203,111 @@ public StringJoiner(间隔符号，开始符号，结束符号)创建一个Strin
       
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/java%E5%85%A5%E9%97%A8/">java入门</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/12/27/hexo/" class="article-date">
+      <time datetime="2022-12-27T11:17:51.000Z" itemprop="datePublished">2022-12-27</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/12/27/hexo/">hexo</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1.安装git"></a>1.安装git</h3><h3 id="2-安装Node-js"><a href="#2-安装Node-js" class="headerlink" title="2.安装Node.js"></a>2.安装Node.js</h3><p>nodejs选择LTS版本就行了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3.安装hexo"></a>3.安装hexo</h3><p>在开hexo博客的文件夹中,用git打开<br>输入  </p>
+<blockquote>
+<p>npm install -g hexo-cli &gt;</p>
+</blockquote>
+<p>   安装完之后可以用  </p>
+<blockquote>
+<p>hexo -v</p>
+</blockquote>
+<p>查看版本  </p>
+<p>之后初始化hexo,初始化之前,文件夹里没有文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line">//blog 是博客所初始化的名字,可以根据自己的喜好定义</span><br></pre></td></tr></table></figure>
+<p>然后进入blog文件<br>执行下面的命令   </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>新建完成后，指定文件夹目录下有：</p>
+<p>node_modules: 依赖包<br>public：存放生成的页面<br>scaffolds：生成文章的一些模板<br>source：用来存放你的文章<br>themes：主题<br>** _config.yml: 博客的配置文件**</p>
+<p>最后输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo server //或者 hexo s</span><br></pre></td></tr></table></figure>
+<p>在浏览器输入localhost:4000,即查看博客</p>
+<h3 id="4-Github创建个人仓库"><a href="#4-Github创建个人仓库" class="headerlink" title="4.Github创建个人仓库"></a>4.Github创建个人仓库</h3><p>创建一个和你用户名相同的仓库，后面加.github.io，只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名。其他的地方随意设置.</p>
+<h3 id="5-生成shh添加到github中"><a href="#5-生成shh添加到github中" class="headerlink" title="5.生成shh添加到github中"></a>5.生成shh添加到github中</h3><p>回到git bash中  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+<p>这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道  你是不是对应它的账户。<br>可以用以下两条，检查一下你有没有输对  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+<p>然后创建SSH,一路回车 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+<p>然后会告诉你在本地生成.shh的文件的路径,按路径找到,     </p>
+<p><img src="/2022/12/27/hexo/image-20221227193242479.png" alt="image-20221227193242479"><br>按图中勾住所圈的即可找到文件  </p>
+<p>​    ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。而后在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key把你的id_rsa.pub里面的信息复制进去。</p>
+<p><img src="/2022/12/27/hexo/3194ad0a9d04d94c09485122932968f3.png" alt="img"><br>在git查看是否成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="6-将hexo-部署到github中"><a href="#6-将hexo-部署到github中" class="headerlink" title="6.将hexo 部署到github中"></a>6.将hexo 部署到github中</h3><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到最后，修改为<br>YourgithubName就是你的GitHub账户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/YourgithubName/YourgithubName.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>repo可以去找仓库code那儿和shh混到一块的网址<br>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>然后  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>其中 hexo clean清除了你之前生成的东西，也可以不加。<br>hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写<br>hexo deploy 部署文章，可以用hexo d缩写</p>
+<p><strong>注意:hexo g不能少</strong></p>
+<h3 id="hexo的基本操作"><a href="#hexo的基本操作" class="headerlink" title="hexo的基本操作!"></a>hexo的基本操作!</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;文章名&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/hexo%E5%8D%9A%E5%AE%A2/">hexo博客</a>
     </div>
 
 
