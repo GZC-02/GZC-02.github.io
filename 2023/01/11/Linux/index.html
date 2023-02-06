@@ -25,13 +25,15 @@
 <meta property="og:image" content="http://example.com/Linux/12.png">
 <meta property="og:image" content="http://example.com/Linux/%E6%A0%87%E5%BF%97.png">
 <meta property="og:image" content="http://example.com/Linux/%E4%B8%BB%E6%B5%81%E7%89%88%E6%9C%AC.png">
+<meta property="og:image" content="http://example.com/Linux/image-20230122131835632.png">
+<meta property="og:image" content="http://example.com/Linux/image-20230122132619697.png">
 <meta property="og:image" content="http://example.com/Linux/image-20230111181217057.png">
 <meta property="og:image" content="http://example.com/Linux/CRT.png">
 <meta property="og:image" content="http://example.com/Linux/image-20230111200557895.png">
 <meta property="og:image" content="http://example.com/Linux/image-20230111200649061.png">
 <meta property="og:image" content="http://example.com/Linux/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png">
 <meta property="article:published_time" content="2023-01-11T08:43:37.000Z">
-<meta property="article:modified_time" content="2023-01-11T12:58:15.644Z">
+<meta property="article:modified_time" content="2023-01-22T10:18:06.619Z">
 <meta property="article:author" content="GZC">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/Linux/12.png">
@@ -328,6 +330,12 @@
 <p>* VmWare    :收费的.</p>
 <p>* VirtualBox  :免费的.</p>
 <h3 id="2-2-安装VmWare"><a href="#2-2-安装VmWare" class="headerlink" title="2.2 安装VmWare"></a>2.2 安装VmWare</h3><p>参考《虚拟软件vmware安装.doc》</p>
+<p>检查虚拟网卡</p>
+<p>1.我们打开windows系统的设置页面，点击高级网络设置中的更改适配选项</p>
+<p>或者win+r键，输入ncpa.cpl，打开</p>
+<p><img src="/Linux/image-20230122131835632.png" alt="image-20230122131835632"></p>
+<p>出现下图V1，V8才行，==如果没有就卸载，重启，重新安装一遍==。</p>
+<p><img src="/Linux/image-20230122132619697.png" alt="image-20230122132619697"></p>
 <h3 id="2-3-安装centOS"><a href="#2-3-安装centOS" class="headerlink" title="2.3 安装centOS"></a>2.3 安装centOS</h3><p>登录时，用户写root，密码就是你设的根密码（021203）（不是账号密码）。</p>
 <p><img src="/Linux/image-20230111181217057.png" alt="image-20230111181217057"></p>
 <p><strong>ifconfig inet addr 就是ip地址</strong></p>
@@ -337,6 +345,10 @@
 <p>修改背景</p>
 <p><img src="/Linux/image-20230111200557895.png" alt="image-20230111200557895"></p>
 <p><img src="/Linux/image-20230111200649061.png" alt="image-20230111200649061"></p>
+<p>2.5 </p>
+<p>FinalShell<br>既然决定使用命令行去学习Liux操作系统，那么就必须丰富一下工具的使用。<br>我们使用VMware可以得到Linux虚拟机，但是在VMware中操作Linux的命令行页面不太方便，主要是：<br>·内容的复制、粘贴跨越VMware不方便</p>
+<p>·文件的上传、下载跨越VMware不方便<br>也就是和Linux系统的各类交互，跨越VMware不方便<br>我们可以通过第三方软件，FinalShell,远程连接到Linux操作系统之上。<br>并通过FinalShell去操作Linux系统。<br>这样各类操作都会十分的方便。</p>
+<p>3.为什么使用FinalShelli连接Linux去使用<br>操作Linux系统中间跨越VMware窗口会导致交互不太方便<br>我们只需要使用命令行无需使用图形化，所以通过命令行远程连接<br>使用即可<br>4.如何查看Liux的IP地址并远程连接呢<br>在Linux操作系统中，桌面空白右键点击：open in terminal<br>输入ifconfig,即可看到IP地址<br>在FinalShell中配置好P地址，账号密码后即可连接成功</p>
 <h3 id="3-Linux目录结构"><a href="#3-Linux目录结构" class="headerlink" title="3 Linux目录结构"></a>3 Linux目录结构</h3><p><img src="/Linux/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png" alt="Linux目录结构"></p>
 <p>root管理员的home目录root</p>
 <p>其他用户的home目录home目录中</p>
@@ -377,7 +389,7 @@
         <p><span>本文标题:</span><a href="/2023/01/11/Linux/">Linux</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页"></a></p>
         <p><span>发布时间:</span>2023-01-11, 16:43:37</p>
-        <p><span>最后更新:</span>2023-01-11, 20:58:15</p>
+        <p><span>最后更新:</span>2023-01-22, 18:18:06</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2023/01/11/Linux/" title="Linux">http://example.com/2023/01/11/Linux/</a>
             <span class="copy-path" data-clipboard-text="原文: http://example.com/2023/01/11/Linux/　　作者: " title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -483,7 +495,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2023/01/14/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/">面向对象进阶</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/11/Linux/">Linux</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/08/%E6%98%93%E7%BB%8F/">易经</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6%E4%B8%8A/">面向对象进阶上</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/07/%E5%8A%A8%E6%BC%AB/">动漫</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/06/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">学生管理系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/04/%E9%9B%86%E5%90%88/">集合</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/03/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/">综合练习</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/03/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/02/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/01/%E6%96%B9%E6%B3%95/">方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/30/java%E6%95%B0%E7%BB%84/">java数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/30/java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">java流程控制</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/28/java%E8%BF%90%E7%AE%97%E7%AC%A6/">java运算符</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/28/Junit-%E6%B5%8B%E8%AF%95%E6%A6%82%E8%BF%B0/">Junit_测试概述</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/28/idea/">idea</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/27/java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">Java基础语法</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/27/hexo/">hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/27/test-my-site/">test_my_site</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/27/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2023/02/04/idea%E9%A1%B9%E7%9B%AE%E6%95%99%E7%A8%8B/">idea项目教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/22/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">Linux基础操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/22/%E5%88%9D%E5%A7%8Blinux/">初始linux</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/14/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/">面向对象进阶</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/11/Linux/">Linux</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/08/%E6%98%93%E7%BB%8F/">易经</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6%E4%B8%8A/">面向对象进阶上</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/07/%E5%8A%A8%E6%BC%AB/">动漫</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/06/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">学生管理系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/04/%E9%9B%86%E5%90%88/">集合</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/03/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/">综合练习</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/03/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/02/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/01/%E6%96%B9%E6%B3%95/">方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/30/java%E6%95%B0%E7%BB%84/">java数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/30/java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">java流程控制</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/28/java%E8%BF%90%E7%AE%97%E7%AC%A6/">java运算符</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/28/Junit-%E6%B5%8B%E8%AF%95%E6%A6%82%E8%BF%B0/">Junit_测试概述</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/28/idea/">idea</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/27/java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">Java基础语法</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/27/hexo/">hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/27/test-my-site/">test_my_site</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/27/hello-world/">Hello World</a></li></ul>
 
 
 
