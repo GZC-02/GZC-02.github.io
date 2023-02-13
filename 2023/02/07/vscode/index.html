@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="GZC" />
+
+
+
+<meta name="description" content="[toc] vscode安装 常用插件1.open in browser作用：html页面在浏览器中打开预览 点击左侧栏的第五个方块图标，搜索 open in browser 插件，点击安装 此时再打开html页面，右键单击，就有了 open in default browser 的选项，选择打开默认浏览器  也可以点击 open in other browser 选择其他浏览器  success">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vscode">
+<meta property="og:url" content="http://example.com/2023/02/07/vscode/index.html">
+<meta property="og:site_name" content="GZC的博客">
+<meta property="og:description" content="[toc] vscode安装 常用插件1.open in browser作用：html页面在浏览器中打开预览 点击左侧栏的第五个方块图标，搜索 open in browser 插件，点击安装 此时再打开html页面，右键单击，就有了 open in default browser 的选项，选择打开默认浏览器  也可以点击 open in other browser 选择其他浏览器  success">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/vscode/image-20230207163851371.png">
+<meta property="og:image" content="http://example.com/vscode/e3bbd7435636d1662959657b7d28b07e.png">
+<meta property="og:image" content="http://example.com/vscode/18a3fd952e4d68c823d67d204998f658.png">
+<meta property="og:image" content="http://example.com/vscode/3bf898ab036ebe330bc1d6f877fdb924.png">
+<meta property="og:image" content="http://example.com/vscode/92ed6659e7b6e70197308de84874c4cf.png">
+<meta property="og:image" content="http://example.com/vscode/a3836214e9dd509485a0c54ee69d2b80.png">
+<meta property="og:image" content="http://example.com/vscode/1d6286341641b12108b20f2787f2b4c0.png">
+<meta property="og:image" content="http://example.com/vscode/4a3052baf952fd6dc388314b55aa7224.png">
+<meta property="og:image" content="http://example.com/vscode/8fecc5b826e89fcfb331317fd3b95037.png">
+<meta property="og:image" content="http://example.com/vscode/c52c91acbb6a9322edbb5efc4eee32df.png">
+<meta property="og:image" content="http://example.com/vscode/b2dac76f85d3beb9b11534b2fcec9aba.png">
+<meta property="og:image" content="http://example.com/vscode/882751d69a4a8c3b6dcdb80d24f71266.png">
+<meta property="og:image" content="http://example.com/vscode/ea9e9b8cf9c3db86cddc87cffc87708e.png">
+<meta property="og:image" content="http://example.com/vscode/83cf5d91920fa271aefb5d661c6df856.png">
+<meta property="og:image" content="http://example.com/vscode/4f432656d664bdbe7cda5ae569f606e7.png">
+<meta property="og:image" content="http://example.com/vscode/8e3cdf56aa9f3bd40cd80a4c19b77f25.png">
+<meta property="og:image" content="http://example.com/vscode/7348af3680049de3db6e18656fcbabf1.png">
+<meta property="og:image" content="http://example.com/vscode/5ab2c92c036d9d05978d663d4b35bcdb.png">
+<meta property="og:image" content="http://example.com/vscode/fe3730d429d272ae7880cc159384fd99.png">
+<meta property="og:image" content="http://example.com/vscode/8986f233679425955b4dcbb77dcfd731.png">
+<meta property="og:image" content="http://example.com/vscode/7c5ec0d0ff40afac93010a4d057c5faa.png">
+<meta property="og:image" content="http://example.com/vscode/70-167594555675615.png">
+<meta property="og:image" content="http://example.com/!%5Bimg%5D(https:/img-blog.csdn.net/20181014212417676?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzM0MTA0NDQ2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)">
+<meta property="og:image" content="http://example.com/vscode/70-167594549888411.png">
+<meta property="og:image" content="http://example.com/vscode/70-16759454892659.png">
+<meta property="og:image" content="http://example.com/vscode/70-16759454776867.png">
+<meta property="og:image" content="http://example.com/vscode/70.gif">
+<meta property="og:image" content="http://example.com/vscode/image-20230207162020686.png">
+<meta property="article:published_time" content="2023-02-07T07:39:51.000Z">
+<meta property="article:modified_time" content="2023-02-09T12:33:26.937Z">
+<meta property="article:author" content="GZC">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/vscode/image-20230207163851371.png">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="GZC的博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>vscode | GZC的博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: 
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/"></a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页"></a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页"></a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-vscode" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/02/07/vscode/" class="article-date">
+      <time datetime="2023-02-07T07:39:51.000Z" itemprop="datePublished">2023-02-07</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vscode
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Web/">Web</a>
+    </div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>[toc]</p>
+<h1 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><img src="/vscode/image-20230207163851371.png" alt="image-20230207163851371"></p>
+<h2 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h2><h3 id="1-open-in-browser"><a href="#1-open-in-browser" class="headerlink" title="1.open in browser"></a>1.open in browser</h3><p>作用：html页面在浏览器中打开预览</p>
+<p>点击左侧栏的第五个方块图标，搜索 open in browser 插件，点击安装</p>
+<p>此时再打开html页面，右键单击，就有了 open in default browser 的选项，选择打开默认浏览器</p>
+<p><img src="/vscode/e3bbd7435636d1662959657b7d28b07e.png" alt="image-20210802225055036"></p>
+<p>也可以点击 open in other browser 选择其他浏览器</p>
+<p><img src="/vscode/18a3fd952e4d68c823d67d204998f658.png" alt="image-20210802225235763"></p>
+<p>success！</p>
+<p>版本换成1.1.0 不然可能显示打开错误</p>
+<p><img src="/vscode/3bf898ab036ebe330bc1d6f877fdb924.png" alt="image-20210803132810444"></p>
+<h3 id="2-Guides"><a href="#2-Guides" class="headerlink" title="2.Guides"></a>2.Guides</h3><p>作用：辅助线对齐，选中的代码块会通过红线匹配前缀后缀，以免代码繁多搞砸</p>
+<p><img src="/vscode/92ed6659e7b6e70197308de84874c4cf.png" alt="image-20210803131234599"></p>
+<p>效果：</p>
+<p><img src="/vscode/a3836214e9dd509485a0c54ee69d2b80.png" alt="image-20210803131345716"></p>
+<h3 id="3-HTMLHint"><a href="#3-HTMLHint" class="headerlink" title="3. HTMLHint"></a>3. HTMLHint</h3><p>作用：html代码检测，支持html5，错误的地方会标下滑波浪线，提示错误信息</p>
+<p><img src="/vscode/1d6286341641b12108b20f2787f2b4c0.png" alt="image-20210803131702423"></p>
+<h3 id="4-Path-Intellisense"><a href="#4-Path-Intellisense" class="headerlink" title="4. Path Intellisense"></a>4. Path Intellisense</h3><p>作用：可以很好的识别引入文件的路径，根据路径提示功能</p>
+<p><img src="/vscode/4a3052baf952fd6dc388314b55aa7224.png" alt="image-20210803132534889"></p>
+<p>效果如下图：</p>
+<p><img src="/vscode/8fecc5b826e89fcfb331317fd3b95037.png" alt="image-20210803132705043"></p>
+<h3 id="5-Material-Theme"><a href="#5-Material-Theme" class="headerlink" title="5. Material Theme"></a>5. Material Theme</h3><p>作用：这是一款颜色主题的插件，让你的编辑器变得更顺眼</p>
+<p><img src="/vscode/c52c91acbb6a9322edbb5efc4eee32df.png" alt="image-20210803133425285"></p>
+<p>安装完成后，左下角设置，颜色主题</p>
+<p><img src="/vscode/b2dac76f85d3beb9b11534b2fcec9aba.png" alt="image-20210803133601675"></p>
+<p>在上方弹出的选项框里选择你喜欢的主题，我个人喜欢 ocean 的蓝色！</p>
+<p><img src="/vscode/882751d69a4a8c3b6dcdb80d24f71266.png" alt="image-20210803133622388"></p>
+<ol start="6">
+<li>prettier<br>作用：在保存的时候格式化代码，让代码整洁易懂</li>
+</ol>
+<p><img src="/vscode/ea9e9b8cf9c3db86cddc87cffc87708e.png" alt="image-20210803134032298"></p>
+<p>安装成功后，在左下角 设置 -&gt; 设置 -&gt; 输入save -&gt;勾选 Format On Save</p>
+<p><img src="/vscode/83cf5d91920fa271aefb5d661c6df856.png" alt="image-20210803134236423"></p>
+<p>点shift + alt +F 第一次格式化，会弹出一个选框配置格式化插件，选择 prettier</p>
+<p>当每次保存html文件时就可以自动格式化了</p>
+<h3 id="7-vetur"><a href="#7-vetur" class="headerlink" title="7. vetur"></a>7. vetur</h3><p>作用：vue多功能集成插件，包括语法高亮，智能提示，emmet，错误提示，格式化</p>
+<p><img src="/vscode/4f432656d664bdbe7cda5ae569f606e7.png" alt="image-20210803132302492"></p>
+<h3 id="8-carbon-now-sh"><a href="#8-carbon-now-sh" class="headerlink" title="8.carbon-now-sh"></a>8.carbon-now-sh</h3><p>作用：将代码段生成一张图片</p>
+<p><img src="/vscode/8e3cdf56aa9f3bd40cd80a4c19b77f25.png" alt="image-20210803134710579"></p>
+<p>安装后，选择要展示的代码，按F1 或者 ctrl + shift + p 在上方输入框输入 carbon，然后回车</p>
+<p><img src="/vscode/7348af3680049de3db6e18656fcbabf1.png" alt="image-20210803135101756"></p>
+<p>此时会弹出一个网页（需要稳定网络），里面是代码截图，点击export可以导出截图</p>
+<p><img src="/vscode/5ab2c92c036d9d05978d663d4b35bcdb.png" alt="image-20210803135404767"></p>
+<ol start="9">
+<li><h3 id="9-Auto-Rename-Tag"><a href="#9-Auto-Rename-Tag" class="headerlink" title="9.Auto Rename Tag"></a>9.Auto Rename Tag</h3></li>
+</ol>
+<p>  作用：修改html标签，自动完成头部和尾部闭合标签的同步修改</p>
+<p><img src="/vscode/fe3730d429d272ae7880cc159384fd99.png" alt="img"></p>
+<h3 id="10-Project-tree"><a href="#10-Project-tree" class="headerlink" title="10.Project-tree"></a>10.Project-tree</h3><p>作用：自动生成项目目录文件结构树，并写入readme中</p>
+<p>使用：Shift + Cmd + p —&gt; 输入：Project Tree —&gt; 找到需要生成目录的项目 —&gt; 回车</p>
+<p><img src="/vscode/8986f233679425955b4dcbb77dcfd731.png" alt="image-20210813120425330"></p>
+<p><img src="/vscode/7c5ec0d0ff40afac93010a4d057c5faa.png" alt="img"></p>
+<h3 id="11-VSCode前端开发工具插件–LiveServer实时刷新网页"><a href="#11-VSCode前端开发工具插件–LiveServer实时刷新网页" class="headerlink" title="11 VSCode前端开发工具插件–LiveServer实时刷新网页"></a>11 VSCode前端开发工具插件–LiveServer实时刷新网页</h3><p>​    1.VSCode作为一款很不错的开发软件，相比DW更小巧，用来测试前端特别不错，那么我们平时开发网页发现只有写完代码，然后保存，接下来到浏览器中刷新查看效果，然后不停重复，我们发现很多时间就这样浪费到了这三个步骤上。</p>
+<pre><code>2.其实我们可以在VSCode中配置一个网页服务器，修改完代码之后只需要保存代码浏览器就可以实时预览
+</code></pre>
+<p>二、操作步骤<br>    1.打开VScode，点击坐标工具栏的最后一个进入插件安装</p>
+<p><img src="/vscode/70-167594555675615.png" alt="img"></p>
+<pre><code>2.如果没有显示左边的工具栏，也可以在View中找到Extensions进入插件安装
+</code></pre>
+<p><img src="/!%5Bimg%5D(https:/img-blog.csdn.net/20181014212417676?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzM0MTA0NDQ2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)" alt="img"></p>
+<pre><code>3.在搜索框中输入Live Server，在搜索结果中找到如下，选择安装
+</code></pre>
+<p><img src="/vscode/70-167594549888411.png" alt="img"></p>
+<p>4.安装完成需要重启软件插件才能生效</p>
+<p>5.重启过之后，新建一个工作区（也可以直接拖一个文件夹到vscode中），在这里创建一个HTML文件做测试，注意单独新建一个HTML文件拖动到IDE中是使用不了Live Server的，需要把这个HTML文件放到创建的工作区(文件夹)中，新建完成后我们可以在状态栏上看到一个Go Live，单击会自动打开浏览器并显示</p>
+<p>   提示：如果之前也有HTML项目，直接把项目根文件夹拖动到VScode中就会自动添加到工作区</p>
+<p><img src="/vscode/70-16759454892659.png" alt="img"></p>
+<pre><code>6.如果没有状态栏上，也可以在文件上单击右键，选择Open With Live Server这一项
+</code></pre>
+<p><img src="/vscode/70-16759454776867.png" alt="img"></p>
+<pre><code>7.接下来修改代码我们只需要ctrl+S保存修改后的代码，浏览器自动刷新，动图显示
+</code></pre>
+<p><img src="/vscode/70.gif" alt="img"></p>
+<h3 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h3><p>Server is Started at port : 5500，但是却不能打开网页。</p>
+<p>查看是否电脑有将<strong>系统路径</strong>C:\WINDOWS\system32加入环境变量中，我的电脑未加入，将其加入后再重启打开vs code，在之前的文件点击右键并选择点击Open with Live Server.即可打开该文件对应的网页。</p>
+<h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">新建文件:   Ctrl+N</span><br><span class="line">文件之间切换:   Ctrl+Tab</span><br><span class="line">代码行向左或向右缩进:   Ctrl+[ 、 Ctrl+]</span><br><span class="line">代码格式化:   Shift+Alt+F</span><br><span class="line">向上或向下移动一行:   Alt+Up 或 Alt+Down</span><br><span class="line">向上或向下复制一行:   Shift+Alt+Up 或 Shift+Alt+Down</span><br><span class="line">移动到行首:   Home(fn + ←)</span><br><span class="line">移动到行尾:   End(fn + →)</span><br><span class="line">移动到文件结尾:   Ctrl+End</span><br><span class="line">移动到文件开头:   Ctrl+Home</span><br><span class="line">多行编辑(列编辑):   Alt+Shift+鼠标左键 或 Ctrl+Alt+Down/Up</span><br><span class="line">手动保存:   Ctrl+S</span><br><span class="line">全屏显示(再次按则恢复):   F11</span><br><span class="line">放大或缩小(以编辑器左上角为基准):   Ctrl +/-</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p><strong>Tokyo Night</strong></p>
+<p><img src="/vscode/image-20230207162020686.png" alt="image-20230207162020686"></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2023/02/07/vscode/">vscode</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页"></a></p>
+        <p><span>发布时间:</span>2023-02-07, 15:39:51</p>
+        <p><span>最后更新:</span>2023-02-09, 20:33:26</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2023/02/07/vscode/" title="vscode">http://example.com/2023/02/07/vscode/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://example.com/2023/02/07/vscode/　　作者: " title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2023/02/06/%E4%BD%B3%E5%8F%A5/">
+                    佳句
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vscode"><span class="toc-number">1.</span> <span class="toc-text">vscode</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">常用插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-open-in-browser"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.open in browser</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Guides"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.Guides</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-HTMLHint"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. HTMLHint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Path-Intellisense"><span class="toc-number">1.2.4.</span> <span class="toc-text">4. Path Intellisense</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Material-Theme"><span class="toc-number">1.2.5.</span> <span class="toc-text">5. Material Theme</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-vetur"><span class="toc-number">1.2.6.</span> <span class="toc-text">7. vetur</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-carbon-now-sh"><span class="toc-number">1.2.7.</span> <span class="toc-text">8.carbon-now-sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-Auto-Rename-Tag"><span class="toc-number">1.2.8.</span> <span class="toc-text">9.Auto Rename Tag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-Project-tree"><span class="toc-number">1.2.9.</span> <span class="toc-text">10.Project-tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-VSCode%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E6%8F%92%E4%BB%B6%E2%80%93LiveServer%E5%AE%9E%E6%97%B6%E5%88%B7%E6%96%B0%E7%BD%91%E9%A1%B5"><span class="toc-number">1.2.10.</span> <span class="toc-text">11 VSCode前端开发工具插件–LiveServer实时刷新网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%99%E8%AF%AF"><span class="toc-number">1.2.11.</span> <span class="toc-text">错误</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.3.</span> <span class="toc-text">常用快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98"><span class="toc-number">1.4.</span> <span class="toc-text">主题</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"vscode　| GZC的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2023/02/06/%E4%BD%B3%E5%8F%A5/" title="下一篇: 佳句">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2023/02/07/vscode/">vscode</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/02/06/%E4%BD%B3%E5%8F%A5/">佳句</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/02/04/idea%E9%A1%B9%E7%9B%AE%E6%95%99%E7%A8%8B/">idea项目教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/22/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">Linux基础操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/22/%E5%88%9D%E5%A7%8Blinux/">初始linux</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/14/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/">面向对象进阶</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/11/Linux/">Linux</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/08/%E6%98%93%E7%BB%8F/">易经</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6%E4%B8%8A/">面向对象进阶上</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/06/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">学生管理系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/04/%E9%9B%86%E5%90%88/">集合</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/03/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/">综合练习</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/03/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/02/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/01/01/%E6%96%B9%E6%B3%95/">方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/30/java%E6%95%B0%E7%BB%84/">java数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/30/java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">java流程控制</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/28/java%E8%BF%90%E7%AE%97%E7%AC%A6/">java运算符</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/28/Junit-%E6%B5%8B%E8%AF%95%E6%A6%82%E8%BF%B0/">Junit_测试概述</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/28/idea/">idea</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/27/java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">Java基础语法</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/27/hexo/">hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/27/test-my-site/">test_my_site</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/27/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2023 GZC
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
